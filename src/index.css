@@ -1,0 +1,279 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ------------------------------------------------------------------
+   設計語言：iOS 捷徑的圓角方塊 × Notion 的克制排版。
+
+   目標：
+   · 方塊感明確——每個功能是一個可獨立閱讀的區塊
+   · 資訊層次靠留白與字重，不靠邊框與陰影堆疊
+   · 顏色數量少：一個中性色階、一個強調色、兩個語意色
+   · 淺色為預設（iOS 使用者多在淺色下操作），深色跟隨系統
+
+   刻意避開的東西：
+   · 漸層（那是 AI 生成頁面的招牌）
+   · 多層陰影（那是 Material Design 的語彙）
+   · 圓角超過 20px（那是遊戲 App 的語彙）
+------------------------------------------------------------------- */
+/* ------------------------------------------------------------------
+   設計語言：Liquid Glass 科技感 × 並列比較。
+
+   目標：
+   · 玻璃材質只用在導覽層（浮動標頭、底部分頁、彈出視窗），不用在內容層
+   · 推薦卡片、皮夾清單這些內容本身維持不透明實色，數字的清晰度優先於效果
+   · 並列的選項用同樣的視覺份量呈現，不暗示其中一個比較差
+   · 淺色為預設，深色跟隨系統
+
+   色票定案於 Claude Design 原型階段，數值取自實際產出的畫面，不是憑空定的。
+------------------------------------------------------------------- */
+:root {
+  /* 背景：柔和漸層，讓玻璃材質有東西可以折射、模糊，不是純白 */
+  --bg: #eef2ff;
+  --bg-soft: #f5f0ff;
+  --surface: #ffffff;
+  --surface-2: #f7f6fb;
+  --surface-3: #edecfc;
+  --line: #e4e4f0;
+  --line-strong: #d4d3e6;
+
+  --text: #12131c;
+  --text-dim: #6b6d82;
+  --text-faint: #9496ac;
+
+  /* 強調色：科技感靛紫，取代原本的悠遊卡綠 */
+  --accent: #4640de;
+  --accent-soft: #edecfc;
+  --accent-ink: #ffffff;
+
+  --success: #16a34a;
+  --success-soft: #dcfce7;
+  --danger: #dc2626;
+  --danger-soft: #fee2e2;
+
+  --scrim: rgba(18, 19, 28, 0.35);
+  --chrome: rgba(238, 242, 255, 0.86);
+
+  /* 玻璃材質專用變數，只在導覽層／彈出層使用，見下方 .glass 工具 class */
+  --glass-bg: rgba(255, 255, 255, 0.55);
+  --glass-border: rgba(255, 255, 255, 0.3);
+  --glass-highlight: rgba(255, 255, 255, 0.5);
+  --glass-shadow: rgba(70, 64, 222, 0.28);
+  --glass-blur: 20px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0b0e1a;
+    --bg-soft: #131328;
+    --surface: #1c1f2e;
+    --surface-2: #23273a;
+    --surface-3: #2a2f45;
+    --line: #2e3244;
+    --line-strong: #3a3f57;
+
+    --text: #f0f0f5;
+    --text-dim: #9496ac;
+    --text-faint: #6b6d82;
+
+    --accent: #6f6af0;
+    --accent-soft: #232055;
+    --accent-ink: #ffffff;
+
+    --success: #4ade80;
+    --success-soft: #14532d;
+    --danger: #f87171;
+    --danger-soft: #3a1414;
+
+    --scrim: rgba(0, 0, 0, 0.6);
+    --chrome: rgba(11, 14, 26, 0.86);
+
+    --glass-bg: rgba(30, 32, 45, 0.5);
+    --glass-border: rgba(255, 255, 255, 0.12);
+    --glass-highlight: rgba(255, 255, 255, 0.15);
+    --glass-shadow: rgba(0, 0, 0, 0.4);
+    --glass-blur: 20px;
+  }
+}
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+    color-scheme: light dark;
+  }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: theme('fontFamily.body');
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    overscroll-behavior-y: none;
+    font-size: 15px;
+    line-height: 1.4;
+  }
+
+  button, a, [role='button'] {
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+    user-select: none;
+  }
+
+  input, textarea {
+    font-size: 16px;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar { width: 0; height: 0; }
+}
+
+@layer components {
+  .block {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 18px;
+  }
+
+  .block-inset {
+    background: var(--surface-2);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+  }
+
+  .hairline { border-color: var(--line); }
+  .text-dim { color: var(--text-dim); }
+  .text-faint { color: var(--text-faint); }
+
+  .num {
+    font-family: theme('fontFamily.num');
+    font-variant-numeric: tabular-nums;
+    letter-spacing: -0.02em;
+  }
+
+  /* 收據機列印數字感：比 .num 字距更寬，用在最顯眼的回饋大字上 */
+  .tnum {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-variant-numeric: tabular-nums;
+    letter-spacing: 0.04em;
+  }
+
+  /*
+   * 玻璃材質——只用在導覽層：浮動標頭、底部分頁列、彈出視窗背景。
+   * 蘋果官方原則：玻璃材質保留給浮在內容之上的導覽層，內容本身
+   * （列表、卡片）不要套用，避免可讀性問題。這條規則在元件裡也要遵守，
+   * 不是只在這裡定義了就結束。
+   *
+   * 一個畫面裡最多一層玻璃，不要疊加（玻璃疊玻璃會讓對比度垮掉）。
+   */
+  .glass {
+    background: var(--glass-bg);
+    backdrop-filter: blur(var(--glass-blur));
+    -webkit-backdrop-filter: blur(var(--glass-blur));
+    border: 1px solid var(--glass-border);
+    box-shadow:
+      inset 0 1px 0 var(--glass-highlight),
+      0 8px 24px -12px var(--glass-shadow);
+  }
+
+  /* 由下往上浮出的玻璃彈出視窗（皮夾、新增條碼），陰影方向相反 */
+  .glass-sheet {
+    background: var(--glass-bg);
+    backdrop-filter: blur(var(--glass-blur));
+    -webkit-backdrop-filter: blur(var(--glass-blur));
+    border: 1px solid var(--glass-border);
+    box-shadow:
+      inset 0 1px 0 var(--glass-highlight),
+      0 -16px 40px -12px var(--glass-shadow);
+  }
+
+  /*
+   * dvh（動態視窗高度）iOS 要到 15.4 才支援，15.0-15.3 完全不認得這個單位。
+   * 用「先宣告 vh 當備援，再宣告 dvh」的傳統寫法：看不懂 dvh 的瀏覽器會
+   * 停在 vh 那行，看得懂的會被 dvh 覆蓋——不需要 @supports 判斷。
+   * Tailwind 的 min-h-[100dvh] 這種寫法沒辦法表達「兩行都宣告」，
+   * 所以這裡改成獨立的 class。
+   */
+  .min-h-app {
+    min-height: 100vh;
+    min-height: 100dvh;
+  }
+
+  .max-h-sheet {
+    max-height: 88vh;
+    max-height: 88dvh;
+  }
+
+  .eyebrow {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    color: var(--text-faint);
+  }
+
+  .tap {
+    transition: transform 100ms ease, background-color 140ms ease, opacity 140ms ease;
+  }
+
+  .tap:active { transform: scale(0.98); }
+
+  .btn-primary {
+    background: var(--accent);
+    color: var(--accent-ink);
+    border-radius: 12px;
+    font-weight: 600;
+  }
+
+  .btn-secondary {
+    background: var(--surface-2);
+    color: var(--text);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    font-weight: 500;
+  }
+
+  .chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 10px;
+    background: var(--surface-2);
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    font-size: 12px;
+    color: var(--text-dim);
+  }
+
+  .safe-top { padding-top: max(env(safe-area-inset-top), 12px); }
+  .safe-bottom { padding-bottom: max(env(safe-area-inset-bottom), 10px); }
+}
+
+@layer utilities {
+  .scroll-x {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .stack { display: flex; flex-direction: column; gap: 12px; }
+  .stack-lg { display: flex; flex-direction: column; gap: 16px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fadeIn { animation: fadeIn 260ms ease-out; }

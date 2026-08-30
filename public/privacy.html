@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>隱私權政策 — 好付神卡 CardVsPay</title>
+<style>
+  :root {
+    --bg: #F5F5F3; --card: #FFFFFF; --ink: #12131C; --dim: #6B6D82;
+    --accent: #4640DE; --line: #E4E4F0;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang TC", "Noto Sans TC", sans-serif;
+    line-height: 1.7;
+  }
+  .wrap { max-width: 680px; margin: 0 auto; padding: 48px 20px 80px; }
+  h1 { font-size: 24px; font-weight: 700; margin-bottom: 4px; }
+  .updated { color: var(--dim); font-size: 13px; margin-bottom: 32px; }
+  h2 { font-size: 17px; font-weight: 600; margin-top: 36px; margin-bottom: 10px; }
+  p, li { font-size: 15px; color: #2A2B38; }
+  ul { padding-left: 20px; }
+  a { color: var(--accent); }
+  .box {
+    background: var(--card); border: 1px solid var(--line); border-radius: 14px;
+    padding: 16px 18px; margin: 16px 0; font-size: 14px; color: var(--dim);
+  }
+  .box strong { color: var(--ink); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>隱私權政策</h1>
+  <p class="updated">最後更新：2026 年 8 月 25 日</p>
+
+  <div class="box">
+    <strong>一句話總結：</strong>這個 App 目前不需要帳號、沒有伺服器、沒有第三方能看到你的資料。
+    卡片清單、自訂規則、條碼、記帳紀錄，全部只存在你自己裝置的瀏覽器儲存空間裡。
+  </div>
+
+  <h2>我們收集什麼資料</h2>
+  <p>目前（2026 年 8 月版本）完全不收集：</p>
+  <ul>
+    <li>不需要註冊帳號，不收集姓名、Email、電話</li>
+    <li>不收集完整信用卡卡號、身分證字號、真實地址</li>
+    <li>不使用任何第三方分析或廣告追蹤工具</li>
+    <li>不會把你的資料上傳到任何伺服器</li>
+  </ul>
+
+  <h2>GPS 定位</h2>
+  <p>
+    App 會在你允許的情況下讀取裝置的 GPS 座標，用來判斷你目前在哪個商店附近，
+    藉此推薦適合的支付方式。這個座標<strong>只在你的裝置記憶體裡使用，不會被儲存、
+    不會被傳送到任何地方</strong>，關閉分頁或關閉 App 後就消失。
+  </p>
+
+  <h2>資料存在哪裡</h2>
+  <p>
+    你持有哪些卡片、自訂的回饋規則、條碼與會員卡號碼、記帳紀錄，這些資料都用瀏覽器內建的
+    localStorage 與 IndexedDB 存在你自己的裝置上。清除瀏覽器資料或解除安裝 App，
+    這些資料就會一併刪除——我們這邊完全沒有備份，因為我們根本拿不到。
+  </p>
+
+  <h2>備份與換裝置</h2>
+  <p>
+    App 內建「匯出皮夾備份碼」功能，會把你的資料轉成一段文字讓你自己複製保存、
+    在新裝置貼上還原。這段文字只在你自己的裝置間手動搬移，不會經過我們的伺服器。
+  </p>
+
+  <h2>第三方連結</h2>
+  <p>
+    App 會提供連結或嘗試開啟其他支付 App（例如 LINE Pay、街口支付），這只是觸發
+    你手機裡對應 App 的一個網址，我們不會知道你有沒有點、有沒有成功開啟、或後續交易內容。
+    這些第三方 App 有各自獨立的隱私權政策，本政策不適用於它們。
+  </p>
+
+  <h2>地圖資料來源</h2>
+  <p>
+    App 裡的門市地標資料來自 <a href="https://www.openstreetmap.org" target="_blank" rel="noopener">OpenStreetMap</a>
+    貢獻者，依 <a href="https://opendatacommons.org/licenses/odbl/" target="_blank" rel="noopener">ODbL</a> 授權使用。
+  </p>
+
+  <h2>未來規劃（尚未實作）</h2>
+  <p>
+    我們正在規劃選用的登入功能，讓你可以跨裝置同步資料。這項功能上線時，我們會：
+  </p>
+  <ul>
+    <li>更新這份政策，明確說明登入後會收集哪些資料、存放在哪裡</li>
+    <li>訪客模式（不登入）會繼續完整可用，登入永遠是加分選項，不是必要條件</li>
+    <li>採用「使用者裝置不直接連資料庫」的架構，詳見專案的
+      <a href="https://github.com/JackySu51/paynav-taiwan/blob/main/SECURITY.md" target="_blank" rel="noopener">SECURITY.md</a>
+    </li>
+  </ul>
+
+  <h2>兒童隱私</h2>
+  <p>本 App 不特別針對兒童設計，也不會刻意收集兒童的個人資料。</p>
+
+  <h2>政策異動</h2>
+  <p>這份政策未來可能修改，異動會反映在上方的更新日期。建議偶爾回來看一次。</p>
+
+  <h2>聯絡方式</h2>
+  <p>
+    有任何隱私相關疑問，歡迎透過
+    <a href="https://github.com/JackySu51/paynav-taiwan/issues" target="_blank" rel="noopener">GitHub Issues</a>
+    與我們聯絡。資安相關疑慮請參考
+    <a href="https://github.com/JackySu51/paynav-taiwan/blob/main/SECURITY.md" target="_blank" rel="noopener">SECURITY.md</a>
+    裡的回報管道，避免公開發表。
+  </p>
+</div>
+</body>
+</html>

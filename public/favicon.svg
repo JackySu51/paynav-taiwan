@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="PayNav Taiwan">
+  <defs>
+    <!-- 台灣各大支付的代表色掃過 P 的碗：橘（街口）→ 紅（全支付）→ 綠（LINE Pay）→ 藍（悠遊付）→ 青（台灣 Pay） -->
+    <linearGradient id="paySpectrum" x1="228" y1="118" x2="356" y2="300" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FF7A2F" />
+      <stop offset="0.24" stop-color="#F0453C" />
+      <stop offset="0.5" stop-color="#2FC46B" />
+      <stop offset="0.76" stop-color="#1B9FD8" />
+      <stop offset="1" stop-color="#00B3A4" />
+    </linearGradient>
+  </defs>
+
+  <rect width="512" height="512" rx="116" fill="#0B0D12" />
+
+  <!-- P 的碗：漸層描邊，內圈自然留白 -->
+  <path
+    d="M230 131 H260 a70 70 0 0 1 0 140 H230"
+    fill="none"
+    stroke="url(#paySpectrum)"
+    stroke-width="44"
+  />
+
+  <!-- P 的直筆化成條碼：三根粗細不同的直條 -->
+  <rect x="162" y="126" width="14" height="266" rx="6" fill="#FF7A2F" />
+  <rect x="184" y="112" width="8" height="280" rx="4" fill="#1B9FD8" />
+  <rect x="200" y="110" width="30" height="282" rx="9" fill="#F7FAFF" />
+</svg>

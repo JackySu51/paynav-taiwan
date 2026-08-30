@@ -1,0 +1,2034 @@
+{
+  "version": "2026.08-sample",
+  "updated_at": "2026-08-01",
+  "disclaimer": "本規則庫為 MVP 示範資料，數字經簡化，且各家銀行活動每季調整。海外規則另需注意 1.5% 國外交易服務費是否由該卡折抵。實際回饋以發卡銀行公告為準，使用前請自行核對官方頁面。",
+  "paymentMethods": [
+    {
+      "id": "jkopay",
+      "name": "街口支付",
+      "scheme": "jkopay://",
+      "color": "#FF5A2C",
+      "iconName": "qr-code",
+      "webFallback": "https://www.jkos.com/",
+      "storeUrl": "https://apps.apple.com/tw/app/id1051649861",
+      "note": "與日本 PayPay 深度串聯，赴日可直接掃碼且免 1.5% 海外手續費",
+      "overseas": [
+        "JP"
+      ]
+    },
+    {
+      "id": "linepay",
+      "name": "LINE Pay",
+      "scheme": "line://pay",
+      "color": "#06C755",
+      "iconName": "message-circle",
+      "webFallback": "https://pay.line.me/tw/",
+      "storeUrl": "https://apps.apple.com/tw/app/id443904275",
+      "note": "韓國指定店家（CU、樂天、新世界、INNISFREE 等）可用，回饋 LINE POINTS",
+      "overseas": [
+        "KR"
+      ]
+    },
+    {
+      "id": "pxpayplus",
+      "name": "全支付",
+      "scheme": "pxpayplus://",
+      "color": "#D91E2A",
+      "iconName": "shopping-bag",
+      "webFallback": "https://www.pxpayplus.com/",
+      "storeUrl": "https://apps.apple.com/tw/app/id1614860129",
+      "note": "日本掃 PayPay、韓國走 ZeroPay／HIVEX（含傳統市場）",
+      "overseas": [
+        "JP",
+        "KR"
+      ]
+    },
+    {
+      "id": "easywallet",
+      "name": "悠遊付",
+      "scheme": "easywallet://",
+      "color": "#0091D2",
+      "iconName": "train-front",
+      "webFallback": "https://www.easycard.com.tw/easywallet",
+      "storeUrl": "https://apps.apple.com/tw/app/id1484445855",
+      "note": "韓國走 TWQR／Paybooc；台灣可模擬悠遊卡感應進站",
+      "overseas": [
+        "KR"
+      ]
+    },
+    {
+      "id": "icashpay",
+      "name": "icash Pay",
+      "scheme": "icashpay://",
+      "color": "#F08300",
+      "iconName": "store",
+      "webFallback": "https://www.icashcorp.com.tw/",
+      "storeUrl": "https://apps.apple.com/tw/app/id1489163046",
+      "note": "韓國走 TWQR／Paybooc，只能用帳戶或綁銀行帳戶，不能綁信用卡",
+      "overseas": [
+        "KR"
+      ]
+    },
+    {
+      "id": "taiwanpay",
+      "name": "台灣 Pay",
+      "scheme": "taiwanpay://",
+      "color": "#00A19B",
+      "iconName": "landmark",
+      "webFallback": "https://www.twpay.com.tw/",
+      "storeUrl": "https://apps.apple.com/tw/app/id1234500806",
+      "note": "與韓國 BC 卡 Paybooc 合作走 TWQR，帳戶扣款免手續費；繳稅規費最好用",
+      "overseas": [
+        "KR"
+      ]
+    },
+    {
+      "id": "apple_pay",
+      "name": "Apple Pay",
+      "scheme": "shoebox://",
+      "color": "#A1A7B6",
+      "iconName": "smartphone",
+      "webFallback": "https://www.apple.com/tw/apple-pay/",
+      "storeUrl": "",
+      "note": "iPhone 感應支付，回饋看綁定的卡",
+      "overseas": [
+        "JP",
+        "KR"
+      ]
+    },
+    {
+      "id": "physical",
+      "name": "實體刷卡",
+      "scheme": "",
+      "color": "#6E7686",
+      "iconName": "credit-card",
+      "webFallback": "",
+      "storeUrl": "",
+      "note": "直接把卡交給店員，海外消費看卡片的海外加碼",
+      "overseas": [
+        "JP",
+        "KR"
+      ]
+    },
+    {
+      "id": "ipass_money",
+      "name": "一卡通 MONEY",
+      "scheme": "ipassmoney://",
+      "color": "#F5A100",
+      "iconName": "train-front",
+      "webFallback": "https://www.i-pass.com.tw/",
+      "storeUrl": "https://apps.apple.com/tw/app/id1497028179",
+      "note": "專營電支，交通整合最廣，支援 TWQR 與日本 PayPay 跨境",
+      "overseas": [
+        "JP"
+      ]
+    },
+    {
+      "id": "pxpay_plus",
+      "name": "全盈+PAY",
+      "scheme": "pxpayplusfamily://",
+      "color": "#00A0AA",
+      "iconName": "store",
+      "webFallback": "https://www.pxpayplus.com.tw/",
+      "storeUrl": "https://apps.apple.com/tw/app/id1610487576",
+      "note": "全家系電支，2026/2 起支援日本 PayPay",
+      "overseas": [
+        "JP"
+      ]
+    },
+    {
+      "id": "esun_wallet",
+      "name": "玉山 Wallet",
+      "scheme": "esunwallet://",
+      "color": "#0F7C4D",
+      "iconName": "wallet",
+      "webFallback": "https://www.esunbank.com/zh-tw/personal/e-bank/esun-wallet",
+      "storeUrl": "https://apps.apple.com/tw/app/id1102891855",
+      "note": "銀行錢包，支援日本 PayPay 跨境掃碼",
+      "overseas": [
+        "JP"
+      ]
+    },
+    {
+      "id": "taishin_pay",
+      "name": "台新 Pay+",
+      "scheme": "taishinpay://",
+      "color": "#00559B",
+      "iconName": "wallet",
+      "webFallback": "https://www.taishinbank.com.tw/",
+      "storeUrl": "https://apps.apple.com/tw/app/id1449585271",
+      "note": "銀行錢包，2026/2/3 起支援日本 PayPay",
+      "overseas": [
+        "JP"
+      ]
+    },
+    {
+      "id": "opay",
+      "name": "歐付寶 O'Pay",
+      "scheme": "opay://",
+      "color": "#EE7700",
+      "iconName": "shopping-bag",
+      "webFallback": "https://www.opay.tw/",
+      "storeUrl": "https://apps.apple.com/tw/app/id1005730432",
+      "note": "專營電支，網購與線上服務為主"
+    },
+    {
+      "id": "gamapay",
+      "name": "橘子支付 GAMA PAY",
+      "scheme": "gamapay://",
+      "color": "#F4820B",
+      "iconName": "qr-code",
+      "webFallback": "https://www.gamapay.com.tw/",
+      "storeUrl": "https://apps.apple.com/tw/app/id1215382862",
+      "note": "專營電支，遊戲與線上娛樂通路較強"
+    },
+    {
+      "id": "simplepay",
+      "name": "簡單行動支付",
+      "scheme": "",
+      "color": "#3C5A99",
+      "iconName": "qr-code",
+      "webFallback": "https://www.easy-pay.com.tw/",
+      "storeUrl": "",
+      "note": "專營電支，停車與繳費場景為主"
+    },
+    {
+      "id": "px_pay",
+      "name": "全聯 PX Pay",
+      "scheme": "pxpay://",
+      "color": "#E4002B",
+      "iconName": "shopping-bag",
+      "webFallback": "https://www.pxmart.com.tw/",
+      "storeUrl": "https://apps.apple.com/tw/app/id1476812920",
+      "note": "全聯自家儲值＋福利點，不是電支牌照"
+    },
+    {
+      "id": "famipay",
+      "name": "My FamiPay",
+      "scheme": "famiport://",
+      "color": "#00953B",
+      "iconName": "store",
+      "webFallback": "https://www.family.com.tw/",
+      "storeUrl": "https://apps.apple.com/tw/app/id1043046275",
+      "note": "全家 App 內建支付，綁卡加碼常有活動"
+    },
+    {
+      "id": "google_pay",
+      "name": "Google Pay",
+      "scheme": "gpay://",
+      "color": "#4285F4",
+      "iconName": "smartphone",
+      "webFallback": "https://pay.google.com/",
+      "storeUrl": "",
+      "note": "Android 感應支付，回饋看綁定的卡",
+      "overseas": [
+        "JP",
+        "KR"
+      ]
+    },
+    {
+      "id": "samsung_pay",
+      "name": "Samsung Wallet",
+      "scheme": "samsungpay://",
+      "color": "#1428A0",
+      "iconName": "smartphone",
+      "webFallback": "https://www.samsung.com/tw/apps/samsung-wallet/",
+      "storeUrl": "",
+      "note": "三星機種感應支付，支援雙北捷運",
+      "overseas": [
+        "JP",
+        "KR"
+      ]
+    },
+    {
+      "id": "twqr",
+      "name": "TWQR 跨機構掃碼",
+      "scheme": "",
+      "color": "#6B4EFF",
+      "iconName": "qr-code",
+      "webFallback": "https://www.twqrp.com.tw/",
+      "storeUrl": "",
+      "note": "台灣 Pay、悠遊付、icash Pay 在韓國共用的跨國掃碼機制",
+      "overseas": [
+        "KR"
+      ]
+    },
+    {
+      "id": "easycard",
+      "name": "悠遊卡（實體感應）",
+      "scheme": "",
+      "color": "#0091D2",
+      "iconName": "train-front",
+      "webFallback": "https://www.easycard.com.tw/",
+      "storeUrl": "",
+      "note": "實體卡感應，回饋看自動加值綁的信用卡"
+    },
+    {
+      "id": "ipass_card",
+      "name": "一卡通（實體感應）",
+      "scheme": "",
+      "color": "#F5A100",
+      "iconName": "train-front",
+      "webFallback": "https://www.i-pass.com.tw/",
+      "storeUrl": "",
+      "note": "實體卡感應，回饋看自動加值綁的信用卡"
+    }
+  ],
+  "cards": [
+    {
+      "id": "wallet_account",
+      "bank": "電支帳戶",
+      "name": "帳戶扣款（免綁卡）",
+      "always_available": true,
+      "rules": [
+        {
+          "payment_method": "easywallet",
+          "channels": [
+            "kr_convenience",
+            "kr_daiso",
+            "kr_cafe",
+            "kr_supermarket",
+            "kr_department",
+            "kr_dutyfree"
+          ],
+          "base_reward_pct": 0.5,
+          "extra_reward_pct": 18,
+          "cap_amount_monthly": 500,
+          "note": "韓國 Paybooc／TWQR 通路，悠遊付帳戶扣款免海外手續費；活動每期調整，出發前查官網",
+          "valid_until": "2026-08-31",
+          "is_affiliate_highlight": true
+        },
+        {
+          "payment_method": "icashpay",
+          "channels": [
+            "kr_convenience",
+            "kr_daiso",
+            "kr_cafe",
+            "kr_supermarket",
+            "kr_department",
+            "kr_dutyfree"
+          ],
+          "base_reward_pct": 0.5,
+          "extra_reward_pct": 14.5,
+          "cap_amount_monthly": 500,
+          "note": "韓國 Paybooc／TWQR 通路，只能用 icash Pay 帳戶或綁銀行帳戶，不能綁信用卡；帳戶扣款免海外手續費，但活動回饋每期調整",
+          "valid_until": "2026-08-31",
+          "is_affiliate_highlight": true
+        },
+        {
+          "payment_method": "taiwanpay",
+          "channels": [
+            "kr_convenience",
+            "kr_daiso",
+            "kr_cafe",
+            "kr_supermarket",
+            "kr_department",
+            "kr_dutyfree"
+          ],
+          "base_reward_pct": 0.5,
+          "extra_reward_pct": 0,
+          "cap_amount_monthly": null,
+          "note": "韓國 Paybooc／TWQR 免手續費；回饋活動每期落差很大（曾有 20%、也曾停辦），出發前務必查官網",
+          "valid_until": "2026-12-31"
+        },
+        {
+          "payment_method": "pxpayplus",
+          "channels": [
+            "kr_market",
+            "kr_convenience",
+            "kr_cafe",
+            "kr_general"
+          ],
+          "base_reward_pct": 1,
+          "extra_reward_pct": 2.5,
+          "cap_amount_monthly": 500,
+          "note": "韓國 ZeroPay／HIVEX 通路，含傳統市場；單筆滿額另有加碼；帳戶扣款免海外手續費，但活動回饋每期調整",
+          "valid_until": "2026-12-31"
+        },
+        {
+          "payment_method": "linepay",
+          "channels": [
+            "kr_convenience",
+            "kr_cosmetics",
+            "kr_supermarket",
+            "kr_department"
+          ],
+          "base_reward_pct": 1,
+          "extra_reward_pct": 4,
+          "cap_amount_monthly": 300,
+          "note": "韓國指定店家回饋 LINE POINTS，綁指定信用卡可再加碼；帳戶扣款免海外手續費，但活動回饋每期調整",
+          "valid_until": "2026-12-31"
+        },
+        {
+          "payment_method": "easywallet",
+          "channels": [
+            "all"
+          ],
+          "base_reward_pct": 0.5,
+          "extra_reward_pct": 0,
+          "cap_amount_monthly": null,
+          "note": "台灣：悠遊付帳戶扣款基本回饋",
+          "valid_until": "2026-12-31"
+        },
+        {
+          "payment_method": "icashpay",
+          "channels": [
+            "all"
+          ],
+          "base_reward_pct": 0.5,
+          "extra_reward_pct": 0,
+          "cap_amount_monthly": null,
+          "note": "台灣：icash Pay 帳戶扣款基本回饋",
+          "valid_until": "2026-12-31"
+        },
+        {
+          "payment_method": "px_pay",
+          "channels": [
+            "pxmart"
+          ],
+          "base_reward_pct": 1,
+          "extra_reward_pct": 0,
+          "cap_amount_monthly": null,
+          "note": "全聯 PX Pay 儲值消費回饋福利點，非電支牌照",
+          "valid_until": "2026-12-31"
+        },
+        {
+          "payment_method": "opay",
+          "channels": [
+            "all"
+          ],
+          "base_reward_pct": 0.5,
+          "extra_reward_pct": 0,
+          "cap_amount_monthly": null,
+          "note": "歐付寶帳戶扣款基本回饋，線上與網購通路較強",
+          "valid_until": "2026-12-31"
+        },
+        {
+          "payment_method": "gamapay",
+          "channels": [
+            "all"
+          ],
+          "base_reward_pct": 0.5,
+          "extra_reward_pct": 0,
+          "cap_amount_monthly": null,
+          "note": "橘子支付帳戶扣款基本回饋，遊戲與線上娛樂通路較強",
+          "valid_until": "2026-12-31"
+        },
+        {
+          "payment_method": "simplepay",
+          "channels": [
+            "all"
+          ],
+          "base_reward_pct": 0,
+          "extra_reward_pct": 0,
+          "cap_amount_monthly": null,
+          "note": "簡單行動支付主打停車與繳費，一般消費通常無回饋",
+          "valid_until": "2026-12-31"
+        }
+      ]
+    },
+    {
+      "id": "esun_unicard",
+      "bank": "玉山銀行",
+      "name": "Unicard",
+      "apply_url": "https://www.esunbank.com/zh-tw/personal/credit-card/intro/benefits/card/unicard",
+      "rules": [
+        {
+          "payment_method": "jkopay",
+          "channels": [
+            "all"
+          ],
+          "base_reward_pct": 1,
+          "extra_reward_pct": 2,
+          "cap_amount_monthly": 500,
+          "note": "自選「行動支付」類別，需當月一般消費滿 3,000 元",
+          "valid_until": "2026-12-31"
+        },
+        {
+          "payment_method": "linepay",
+          "channels": [
+            "all"
+          ],
+          "base_reward_pct": 1,
+          "extra_reward_pct": 2,
+          "cap_amount_monthly": 500,
+          "note": "自選「行動支付」類別，需當月一般消費滿 3,000 元",
+          "valid_until": "2026-12-31"
+        },
+        {
+          "payment_method": "pxpayplus",
+          "channels": [
+            "all"
+          ],
+          "base_reward_pct": 1,
+          "extra_reward_pct": 2,
+          "cap_amount_monthly": 500,
+          "note": "自選「行動支付」類別，需當月一般消費滿 3,000 元",
+          "valid_until": "2026-12-31"
+        },
+        {
+          "payment_method": "apple_pay",
+          "channels": [
+            "all"
+          ],
+          "base_reward_pct": 1,
+          "extra_reward_pct": 2,
+          "cap_amount_monthly": 500,
+          "note": "感應支付同享自選加碼",
+          "valid_until": "2026-12-31"
+        },
+        {
+          "payment_method": "physical",
+          "channels": [
+            "all"
+          ],
+          "base_reward_pct": 1,
+          "extra_reward_pct": 0,
+          "cap_amount_monthly": null,
+          "note": "一般消費無上限回饋"
+        },
+        {
+          "payment_method": "ipass_money",
+          "channels": [
+            "all"
+          ],
+          "base_reward_pct": 1,
+          "extra_reward_pct": 2,
+          "cap_amount_monthly": 500,
+          "note": "自選行動支付類別，一卡通 MONEY 綁定同享",
+          "valid_until": "2026-12-31"
+        },
+        {
+          "payment_method": "google_pay",
+          "channels": [
+            "all"
+          ],
+          "base_reward_pct": 1,
+          "extra_reward_pct": 2,
+          "cap_amount_monthly": 500,
+          "note": "感應支付比照 Apple Pay 計算",
+          "valid_until": "2026-12-31"
+        },
+        {
+          "payment_method": "esun_wallet",
+          "channels": [
+            "all"
+          ],
+          "base_reward_pct": 1,
+          "extra_reward_pct": 2,
+          "cap_amount_monthly": 500,
+          "note": "玉山自家錢包，行動支付類別加碼",
+          "valid_until": "2026-12-31"
+        },
+        {
+          "payment_method": "physical",
+          "channels": [
+            "jp_general",
+            "jp_convenience",
+            "jp_drugstore",
+            "jp_donki",
+            "jp_supermarket",
+            "jp_restaurant",
+            "jp_department",
+            "kr_general",
+            "kr_convenience",
+            "kr_daiso",
+            "kr_cafe",
+            "kr_cosmetics",
+            "kr_supermarket",
+            "kr_department",
+            "kr_dutyfree",
+            "kr_market",
+            "kr_restaurant"
+          ],
+          "base_reward_pct": 1,
+          "extra_reward_pct": 2,
+          "cap_amount_monthly": null,
+          "note": "自選「海外」類別，日韓實體通路加碼；仍收 1.5% 國外交易服務費；海外刷卡另收約 1.5% 國外交易服務費，需確認本卡是否折抵",
+          "valid_until": "2026-12-31"
+        },
+        {
+          "payment_method": "esun_wallet",
+          "channels": [
+            "jp_general",
+            "jp_convenience",
+            "jp_drugstore",
+            "jp_donki",
+            "jp_supermarket",
+            "jp_restaurant",
+            "jp_department"
+          ],
+          "base_reward_pct": 1,
+          "extra_reward_pct": 3,
+          "cap_amount_monthly": 500,
+          "note": "玉山 Wallet 掃日本 PayPay，免 1.5% 海外手續費",
+          "valid_until": "2026-12-31",
+          "is_affiliate_highlight": true
+        },
+        {
+          "payment_method": "physical",
+          "channels": [
+            "cpc",
+            "fpcc",
+            "nps"
+          ],
+          "base_reward_pct": 1,
+          "extra_reward_pct": 2,
+          "cap_amount_monthly": 500,
+          "note": "自選「交通」類別，加油站適用",
+          "valid_until": "2026-12-31"
+        },
+        {
+          "payment_method": "physical",
+          "channels": [
+            "vieshow",
+            "showtime",
+            "ktv"
+          ],
+          "base_reward_pct": 1,
+          "extra_reward_pct": 2,
+          "cap_amount_monthly": 500,
+          "note": "自選「娛樂」類別，影城適用",
+          "valid_until": "2026-12-31"
+        }
+      ]
+    },
+    {
+      "id": "cathay_cube",
+      "bank": "國泰世華",
+      "name": "CUBE 卡",
+      "apply_url": "https://www.cathaybk.com.tw/cathaybk/personal/product/credit-card/cards/cube/",
+      "rules": [
+        {
+          "payment_method": "linepay",
+          "channels": [
+            "all"
+          ],
+          "base_reward_pct": 0.3,
+          "extra_reward_pct": 3,
+          "cap_amount_monthly": null,
+          "note": "切換「玩數位」方案，小樹點回饋，需符合當期活動門檻",
+          "is_affiliate_highlight": true,
+          "valid_until": "2026-12-31"
+        },
+        {
+          "payment_method": "jkopay",
+          "channels": [
+            "all"
+          ],
+          "base_reward_pct": 0.3,
+          "extra_reward_pct": 3,
+          "cap_amount_monthly": null,
+          "note": "切換「玩數位」方案，小樹點回饋",
+          "valid_until": "2026-12-31"
+        },
+        {
+          "payment_method": "pxpayplus",
+          "channels": [
+            "all"
+          ],
+          "base_reward_pct": 0.3,
+          "extra_reward_pct": 3,
+          "cap_amount_monthly": null,
+          "note": "切換「玩數位」方案，小樹點回饋",
+          "valid_until": "2026-12-31"
+        },
+        {
+          "payment_method": "easywallet",
+          "channels": [
+            "all"
+          ],
+          "base_reward_pct": 0.3,
+          "extra_reward_pct": 3,
+          "cap_amount_monthly": null,
+          "note": "切換「玩數位」方案，小樹點回饋",
+          "valid_until": "2026-12-31"
+        },
+        {
+          "payment_method": "apple_pay",
+          "channels": [
+            "all"
+          ],
+          "base_reward_pct": 0.3,
+          "extra_reward_pct": 3,
+          "cap_amount_monthly": null,
+          "note": "行動支付綁定，方案每月可切換一次",
+          "valid_until": "2026-12-31"
+        },
+        {
+          "payment_method": "physical",
+          "channels": [
+            "all"
+          ],
+          "base_reward_pct": 0.3,
+          "extra_reward_pct": 0,
+          "cap_amount_monthly": null,
+          "note": "未指定方案之一般消費"
+        },
+        {
+          "payment_method": "google_pay",
+          "channels": [
+            "all"
+          ],
+          "base_reward_pct": 0.3,
+          "extra_reward_pct": 3,
+          "cap_amount_monthly": null,
+          "note": "「玩數位」方案，Android 感應支付同享",
+          "valid_until": "2026-12-31"
+        },
+        {
+          "payment_method": "samsung_pay",
+          "channels": [
+            "all"
+          ],
+          "base_reward_pct": 0.3,
+          "extra_reward_pct": 3,
+          "cap_amount_monthly": null,
+          "note": "「玩數位」方案，Samsung Wallet 同享",
+          "valid_until": "2026-12-31"
+        },
+        {
+          "payment_method": "ipass_money",
+          "channels": [
+            "all"
+          ],
+          "base_reward_pct": 0.3,
+          "extra_reward_pct": 3,
+          "cap_amount_monthly": null,
+          "note": "「玩數位」方案，一卡通 MONEY 綁定",
+          "valid_until": "2026-12-31"
+        },
+        {
+          "payment_method": "physical",
+          "channels": [
+            "jp_general",
+            "jp_convenience",
+            "jp_drugstore",
+            "jp_donki",
+            "jp_supermarket",
+            "jp_restaurant",
+            "jp_department",
+            "kr_general",
+            "kr_convenience",
+            "kr_daiso",
+            "kr_cafe",
+            "kr_cosmetics",
+            "kr_supermarket",
+            "kr_department",
+            "kr_dutyfree",
+            "kr_market",
+            "kr_restaurant"
+          ],
+          "base_reward_pct": 0.3,
+          "extra_reward_pct": 3,
+          "cap_amount_monthly": null,
+          "note": "切換「玩世界」方案，日韓當地實體消費加碼；海外刷卡另收約 1.5% 國外交易服務費，需確認本卡是否折抵",
+          "valid_until": "2026-12-31",
+          "is_affiliate_highlight": true
+        },
+        {
+          "payment_method": "apple_pay",
+          "channels": [
+            "jp_general",
+            "jp_convenience",
+            "jp_drugstore",
+            "jp_donki",
+            "jp_supermarket",
+            "jp_restaurant",
+            "jp_department",
+            "kr_general",
+            "kr_convenience",
+            "kr_daiso",
+            "kr_cafe",
+            "kr_cosmetics",
+            "kr_supermarket",
+            "kr_department",
+            "kr_dutyfree",
+            "kr_market",
+            "kr_restaurant"
+          ],
+          "base_reward_pct": 0.3,
+          "extra_reward_pct": 3,
+          "cap_amount_monthly": null,
+          "note": "「玩世界」方案搭 Apple Pay，日韓通用；海外刷卡另收約 1.5% 國外交易服務費，需確認本卡是否折抵",
+          "valid_until": "2026-12-31"
+        },
+        {
+          "payment_method": "physical",
+          "channels": [
+            "foodpanda",
+            "ubereats"
+          ],
+          "base_reward_pct": 0.3,
+          "extra_reward_pct": 3,
+          "cap_amount_monthly": null,
+          "note": "「玩美食」方案，外送平台加碼",
+          "valid_until": "2026-12-31"
+        },
+        {
+          "payment_method": "physical",
+          "channels": [
+            "shopee",
+            "momo_shop",
+            "pchome",
+            "books_com",
+            "coupang"
+          ],
+          "base_reward_pct": 0.3,
+          "extra_reward_pct": 3,
+          "cap_amount_monthly": null,
+          "note": "「玩網購」方案，網購通路加碼",
+          "valid_until": "2026-12-31"
+        }
+      ]
+    },
+    {
+      "id": "taishin_gogo",
+      "bank": "台新銀行",
+      "name": "@GoGo 卡",
+      "apply_url": "https://www.taishinbank.com.tw/TSB/personal/credit/intro/overview/gogocard/",
+      "rules": [
+        {
+          "payment_method": "jkopay",
+          "channels": [
+            "all"
+          ],
+          "base_reward_pct": 1,
+          "extra_reward_pct": 2,
+          "cap_amount_monthly": 500,
+          "note": "登錄後行動支付加碼，回饋為現金回饋",
+          "valid_until": "2026-12-31"
+        },
+        {
+          "payment_method": "linepay",
+          "channels": [
+            "all"
+          ],
+          "base_reward_pct": 1,
+          "extra_reward_pct": 2,
+          "cap_amount_monthly": 500,
+          "note": "登錄後行動支付加碼，回饋為現金回饋",
+          "valid_until": "2026-12-31"
+        },
+        {
+          "payment_method": "pxpayplus",
+          "channels": [
+            "all"
+          ],
+          "base_reward_pct": 1,
+          "extra_reward_pct": 2,
+          "cap_amount_monthly": 500,
+          "note": "登錄後行動支付加碼，回饋為現金回饋",
+          "valid_until": "2026-12-31"
+        },
+        {
+          "payment_method": "icashpay",
+          "channels": [
+            "seven_eleven",
+            "hi_life"
+          ],
+          "base_reward_pct": 1,
+          "extra_reward_pct": 2,
+          "cap_amount_monthly": 300,
+          "note": "指定超商綁定 icash Pay 加碼",
+          "valid_until": "2026-12-31"
+        },
+        {
+          "payment_method": "physical",
+          "channels": [
+            "all"
+          ],
+          "base_reward_pct": 1,
+          "extra_reward_pct": 0,
+          "cap_amount_monthly": null,
+          "note": "一般消費 1% 無上限"
+        },
+        {
+          "payment_method": "pxpay_plus",
+          "channels": [
+            "all"
+          ],
+          "base_reward_pct": 1,
+          "extra_reward_pct": 2,
+          "cap_amount_monthly": 500,
+          "note": "全盈+PAY 綁定加碼，需登錄",
+          "valid_until": "2026-12-31"
+        },
+        {
+          "payment_method": "taishin_pay",
+          "channels": [
+            "all"
+          ],
+          "base_reward_pct": 1,
+          "extra_reward_pct": 2,
+          "cap_amount_monthly": 500,
+          "note": "台新自家 Pay+ 綁定加碼",
+          "valid_until": "2026-12-31"
+        },
+        {
+          "payment_method": "google_pay",
+          "channels": [
+            "all"
+          ],
+          "base_reward_pct": 1,
+          "extra_reward_pct": 2,
+          "cap_amount_monthly": 500,
+          "note": "感應支付比照 Apple Pay",
+          "valid_until": "2026-12-31"
+        },
+        {
+          "payment_method": "taishin_pay",
+          "channels": [
+            "jp_general",
+            "jp_convenience",
+            "jp_drugstore",
+            "jp_donki",
+            "jp_supermarket",
+            "jp_restaurant",
+            "jp_department"
+          ],
+          "base_reward_pct": 1,
+          "extra_reward_pct": 3,
+          "cap_amount_monthly": 300,
+          "note": "台新 Pay+ 掃日本 PayPay（2026/2 起支援），免海外手續費",
+          "valid_until": "2026-12-31",
+          "is_affiliate_highlight": true
+        },
+        {
+          "payment_method": "physical",
+          "channels": [
+            "shopee",
+            "momo_shop",
+            "pchome",
+            "books_com"
+          ],
+          "base_reward_pct": 1,
+          "extra_reward_pct": 2,
+          "cap_amount_monthly": 500,
+          "note": "網購通路加碼，需登錄",
+          "valid_until": "2026-12-31"
+        },
+        {
+          "payment_method": "physical",
+          "channels": [
+            "foodpanda",
+            "ubereats"
+          ],
+          "base_reward_pct": 1,
+          "extra_reward_pct": 2,
+          "cap_amount_monthly": 300,
+          "note": "外送平台加碼，需登錄",
+          "valid_until": "2026-12-31"
+        }
+      ]
+    },
+    {
+      "id": "taishin_flygo",
+      "bank": "台新銀行",
+      "name": "FlyGo 卡",
+      "apply_url": "https://www.taishinbank.com.tw/TSB/personal/credit/intro/overview/flygocard/",
+      "rules": [
+        {
+          "payment_method": "apple_pay",
+          "channels": [
+            "all"
+          ],
+          "base_reward_pct": 1,
+          "extra_reward_pct": 2,
+          "cap_amount_monthly": 500,
+          "note": "旅遊與行動支付加碼，適合出國與交通",
+          "valid_until": "2026-12-31"
+        },
+        {
+          "payment_method": "easywallet",
+          "channels": [
+            "all"
+          ],
+          "base_reward_pct": 1,
+          "extra_reward_pct": 2,
+          "cap_amount_monthly": 300,
+          "note": "悠遊付綁定加碼，交通類消費另有活動",
+          "valid_until": "2026-12-31"
+        },
+        {
+          "payment_method": "physical",
+          "channels": [
+            "all"
+          ],
+          "base_reward_pct": 1,
+          "extra_reward_pct": 0,
+          "cap_amount_monthly": null,
+          "note": "一般消費 1%"
+        },
+        {
+          "payment_method": "google_pay",
+          "channels": [
+            "all"
+          ],
+          "base_reward_pct": 1,
+          "extra_reward_pct": 2,
+          "cap_amount_monthly": 500,
+          "note": "感應支付加碼",
+          "valid_until": "2026-12-31"
+        },
+        {
+          "payment_method": "physical",
+          "channels": [
+            "jp_general",
+            "jp_convenience",
+            "jp_drugstore",
+            "jp_donki",
+            "jp_supermarket",
+            "jp_restaurant",
+            "jp_department",
+            "kr_general",
+            "kr_convenience",
+            "kr_daiso",
+            "kr_cafe",
+            "kr_cosmetics",
+            "kr_supermarket",
+            "kr_department",
+            "kr_dutyfree",
+            "kr_market",
+            "kr_restaurant"
+          ],
+          "base_reward_pct": 1,
+          "extra_reward_pct": 2,
+          "cap_amount_monthly": 500,
+          "note": "海外實體消費加碼，主打旅遊場景；海外刷卡另收約 1.5% 國外交易服務費，需確認本卡是否折抵",
+          "valid_until": "2026-12-31",
+          "is_affiliate_highlight": true
+        },
+        {
+          "payment_method": "apple_pay",
+          "channels": [
+            "jp_general",
+            "jp_convenience",
+            "jp_drugstore",
+            "jp_donki",
+            "jp_supermarket",
+            "jp_restaurant",
+            "jp_department",
+            "kr_general",
+            "kr_convenience",
+            "kr_daiso",
+            "kr_cafe",
+            "kr_cosmetics",
+            "kr_supermarket",
+            "kr_department",
+            "kr_dutyfree",
+            "kr_market",
+            "kr_restaurant"
+          ],
+          "base_reward_pct": 1,
+          "extra_reward_pct": 2,
+          "cap_amount_monthly": 500,
+          "note": "海外感應支付加碼；海外刷卡另收約 1.5% 國外交易服務費，需確認本卡是否折抵",
+          "valid_until": "2026-12-31"
+        },
+        {
+          "payment_method": "taishin_pay",
+          "channels": [
+            "jp_general",
+            "jp_convenience",
+            "jp_drugstore",
+            "jp_donki",
+            "jp_supermarket",
+            "jp_restaurant",
+            "jp_department"
+          ],
+          "base_reward_pct": 1,
+          "extra_reward_pct": 2,
+          "cap_amount_monthly": 300,
+          "note": "赴日掃 PayPay，免 1.5% 國外交易服務費；帳戶扣款免海外手續費，但活動回饋每期調整",
+          "valid_until": "2026-12-31"
+        },
+        {
+          "payment_method": "physical",
+          "channels": [
+            "cpc",
+            "fpcc",
+            "nps"
+          ],
+          "base_reward_pct": 1,
+          "extra_reward_pct": 1,
+          "cap_amount_monthly": 300,
+          "note": "加油站加碼，需綁定",
+          "valid_until": "2026-12-31"
+        },
+        {
+          "payment_method": "easywallet",
+          "channels": [
+            "mrt",
+            "bus",
+            "thsr",
+            "tra"
+          ],
+          "base_reward_pct": 1,
+          "extra_reward_pct": 2,
+          "cap_amount_monthly": 300,
+          "note": "交通類加碼，悠遊付綁定",
+          "valid_until": "2026-12-31"
+        }
+      ]
+    },
+    {
+      "id": "fubon_j",
+      "bank": "台北富邦",
+      "name": "J 卡",
+      "apply_url": "https://www.fubon.com/banking/personal/credit_card/all_card/j_card/j_card.htm",
+      "rules": [
+        {
+          "payment_method": "jkopay",
+          "channels": [
+            "all"
+          ],
+          "base_reward_pct": 1,
+          "extra_reward_pct": 4,
+          "cap_amount_monthly": 300,
+          "note": "綁定街口支付主打加碼，需登錄活動並達門檻",
+          "is_affiliate_highlight": true,
+          "valid_until": "2026-12-31"
+        },
+        {
+          "payment_method": "jkopay",
+          "channels": [
+            "seven_eleven",
+            "family_mart",
+            "hi_life",
+            "ok_mart"
+          ],
+          "base_reward_pct": 1,
+          "extra_reward_pct": 9,
+          "cap_amount_monthly": 200,
+          "note": "超商 × 街口限時加碼，回饋上限低但單筆效益高",
+          "is_affiliate_highlight": true,
+          "valid_until": "2026-12-31"
+        },
+        {
+          "payment_method": "physical",
+          "channels": [
+            "all"
+          ],
+          "base_reward_pct": 1,
+          "extra_reward_pct": 0,
+          "cap_amount_monthly": null,
+          "note": "一般消費 1%"
+        },
+        {
+          "payment_method": "jkopay",
+          "channels": [
+            "jp_general",
+            "jp_convenience",
+            "jp_drugstore",
+            "jp_donki",
+            "jp_supermarket",
+            "jp_restaurant",
+            "jp_department"
+          ],
+          "base_reward_pct": 1,
+          "extra_reward_pct": 4,
+          "cap_amount_monthly": 300,
+          "note": "街口與日本 PayPay 串聯，赴日掃碼加碼且免海外手續費",
+          "valid_until": "2026-12-31",
+          "is_affiliate_highlight": true
+        },
+        {
+          "payment_method": "google_pay",
+          "channels": [
+            "all"
+          ],
+          "base_reward_pct": 1,
+          "extra_reward_pct": 0,
+          "cap_amount_monthly": null,
+          "note": "一般感應支付 1%",
+          "valid_until": "2026-12-31"
+        },
+        {
+          "payment_method": "physical",
+          "channels": [
+            "kr_general",
+            "kr_convenience",
+            "kr_daiso",
+            "kr_cafe",
+            "kr_cosmetics",
+            "kr_supermarket",
+            "kr_department",
+            "kr_dutyfree",
+            "kr_market",
+            "kr_restaurant"
+          ],
+          "base_reward_pct": 1,
+          "extra_reward_pct": 2,
+          "cap_amount_monthly": null,
+          "note": "海外實體消費基本 3% 無上限，滿千另有加碼；海外刷卡另收約 1.5% 國外交易服務費，需確認本卡是否折抵",
+          "valid_until": "2026-12-31",
+          "is_affiliate_highlight": true
+        }
+      ]
+    },
+    {
+      "id": "fubon_momo",
+      "bank": "台北富邦",
+      "name": "momo 卡",
+      "apply_url": "https://www.fubon.com/banking/personal/credit_card/all_card/momo_card/momo_card.htm",
+      "rules": [
+        {
+          "payment_method": "pxpayplus",
+          "channels": [
+            "all"
+          ],
+          "base_reward_pct": 1,
+          "extra_reward_pct": 2,
+          "cap_amount_monthly": 400,
+          "note": "全支付綁定加碼，回饋以 momo 幣發放",
+          "valid_until": "2026-12-31"
+        },
+        {
+          "payment_method": "pxpayplus",
+          "channels": [
+            "pxmart"
+          ],
+          "base_reward_pct": 1,
+          "extra_reward_pct": 4,
+          "cap_amount_monthly": 300,
+          "note": "全聯 × 全支付通路加碼",
+          "valid_until": "2026-12-31"
+        },
+        {
+          "payment_method": "physical",
+          "channels": [
+            "all"
+          ],
+          "base_reward_pct": 1,
+          "extra_reward_pct": 0,
+          "cap_amount_monthly": null,
+          "note": "一般消費 1%"
+        },
+        {
+          "payment_method": "pxpay_plus",
+          "channels": [
+            "all"
+          ],
+          "base_reward_pct": 1,
+          "extra_reward_pct": 2,
+          "cap_amount_monthly": 400,
+          "note": "全盈+PAY 綁定加碼",
+          "valid_until": "2026-12-31"
+        },
+        {
+          "payment_method": "famipay",
+          "channels": [
+            "family_mart"
+          ],
+          "base_reward_pct": 1,
+          "extra_reward_pct": 3,
+          "cap_amount_monthly": 200,
+          "note": "全家 My FamiPay 綁定，超商加碼",
+          "valid_until": "2026-12-31"
+        },
+        {
+          "payment_method": "pxpayplus",
+          "channels": [
+            "jp_general",
+            "jp_convenience",
+            "jp_drugstore",
+            "jp_donki",
+            "jp_supermarket",
+            "jp_restaurant",
+            "jp_department"
+          ],
+          "base_reward_pct": 1,
+          "extra_reward_pct": 2,
+          "cap_amount_monthly": 300,
+          "note": "全支付掃日本 PayPay，免海外手續費",
+          "valid_until": "2026-12-31"
+        },
+        {
+          "payment_method": "physical",
+          "channels": [
+            "momo_shop"
+          ],
+          "base_reward_pct": 1,
+          "extra_reward_pct": 4,
+          "cap_amount_monthly": 500,
+          "note": "momo 購物網刷本卡加碼，回饋為 momo 幣",
+          "valid_until": "2026-12-31",
+          "is_affiliate_highlight": true
+        },
+        {
+          "payment_method": "pxpayplus",
+          "channels": [
+            "shopee"
+          ],
+          "base_reward_pct": 1,
+          "extra_reward_pct": 2,
+          "cap_amount_monthly": 300,
+          "note": "蝦皮綁全支付加碼",
+          "valid_until": "2026-12-31"
+        }
+      ]
+    },
+    {
+      "id": "ubot_line",
+      "bank": "聯邦銀行",
+      "name": "賴點卡",
+      "apply_url": "https://card.ubot.com.tw/eCard/",
+      "rules": [
+        {
+          "payment_method": "linepay",
+          "channels": [
+            "all"
+          ],
+          "base_reward_pct": 1,
+          "extra_reward_pct": 2,
+          "cap_amount_monthly": 500,
+          "note": "LINE Pay 綁定回饋 LINE POINTS",
+          "valid_until": "2026-12-31"
+        },
+        {
+          "payment_method": "linepay",
+          "channels": [
+            "seven_eleven",
+            "family_mart",
+            "starbucks",
+            "louisa"
+          ],
+          "base_reward_pct": 1,
+          "extra_reward_pct": 4,
+          "cap_amount_monthly": 300,
+          "note": "指定超商與咖啡通路加碼，需當期登錄",
+          "is_affiliate_highlight": true,
+          "valid_until": "2026-12-31"
+        },
+        {
+          "payment_method": "physical",
+          "channels": [
+            "all"
+          ],
+          "base_reward_pct": 0.5,
+          "extra_reward_pct": 0,
+          "cap_amount_monthly": null,
+          "note": "一般消費 0.5%"
+        },
+        {
+          "payment_method": "pxpay_plus",
+          "channels": [
+            "all"
+          ],
+          "base_reward_pct": 1,
+          "extra_reward_pct": 1.5,
+          "cap_amount_monthly": 300,
+          "note": "全盈+PAY 綁定",
+          "valid_until": "2026-12-31"
+        },
+        {
+          "payment_method": "physical",
+          "channels": [
+            "jp_general",
+            "jp_convenience",
+            "jp_drugstore",
+            "jp_donki",
+            "jp_supermarket",
+            "jp_restaurant",
+            "jp_department",
+            "kr_general",
+            "kr_convenience",
+            "kr_daiso",
+            "kr_cafe",
+            "kr_cosmetics",
+            "kr_supermarket",
+            "kr_department",
+            "kr_dutyfree",
+            "kr_market",
+            "kr_restaurant"
+          ],
+          "base_reward_pct": 1,
+          "extra_reward_pct": 1.5,
+          "cap_amount_monthly": 300,
+          "note": "海外一般消費加碼；海外刷卡另收約 1.5% 國外交易服務費，需確認本卡是否折抵",
+          "valid_until": "2026-12-31"
+        },
+        {
+          "payment_method": "linepay",
+          "channels": [
+            "kr_convenience",
+            "kr_cosmetics",
+            "kr_supermarket",
+            "kr_department"
+          ],
+          "base_reward_pct": 1,
+          "extra_reward_pct": 3,
+          "cap_amount_monthly": 300,
+          "note": "韓國指定店家綁賴點卡再加碼；帳戶扣款免海外手續費，但活動回饋每期調整",
+          "valid_until": "2026-12-31"
+        },
+        {
+          "payment_method": "linepay",
+          "channels": [
+            "wulan50",
+            "chingshin",
+            "milkshop",
+            "kebuke",
+            "guiji"
+          ],
+          "base_reward_pct": 1,
+          "extra_reward_pct": 3,
+          "cap_amount_monthly": 200,
+          "note": "手搖飲通路加碼，需登錄",
+          "valid_until": "2026-12-31",
+          "is_affiliate_highlight": true
+        }
+      ]
+    },
+    {
+      "id": "ctbc_linepay",
+      "bank": "中國信託",
+      "name": "LINE Pay signature 卡",
+      "apply_url": "https://www.ctbcbank.com/twrbo/zh_tw/cc_index/cc_apply.html",
+      "rules": [
+        {
+          "payment_method": "linepay",
+          "channels": [
+            "all"
+          ],
+          "base_reward_pct": 1,
+          "extra_reward_pct": 2,
+          "cap_amount_monthly": null,
+          "note": "LINE Pay 一卡通綁定，回饋 LINE POINTS",
+          "valid_until": "2026-12-31"
+        },
+        {
+          "payment_method": "easywallet",
+          "channels": [
+            "all"
+          ],
+          "base_reward_pct": 1,
+          "extra_reward_pct": 0.5,
+          "cap_amount_monthly": 200,
+          "note": "交通類加碼",
+          "valid_until": "2026-12-31"
+        },
+        {
+          "payment_method": "physical",
+          "channels": [
+            "all"
+          ],
+          "base_reward_pct": 1,
+          "extra_reward_pct": 0,
+          "cap_amount_monthly": null,
+          "note": "一般消費 1%"
+        },
+        {
+          "payment_method": "google_pay",
+          "channels": [
+            "all"
+          ],
+          "base_reward_pct": 1,
+          "extra_reward_pct": 1,
+          "cap_amount_monthly": 300,
+          "note": "感應支付加碼",
+          "valid_until": "2026-12-31"
+        },
+        {
+          "payment_method": "physical",
+          "channels": [
+            "jp_general",
+            "jp_convenience",
+            "jp_drugstore",
+            "jp_donki",
+            "jp_supermarket",
+            "jp_restaurant",
+            "jp_department",
+            "kr_general",
+            "kr_convenience",
+            "kr_daiso",
+            "kr_cafe",
+            "kr_cosmetics",
+            "kr_supermarket",
+            "kr_department",
+            "kr_dutyfree",
+            "kr_market",
+            "kr_restaurant"
+          ],
+          "base_reward_pct": 1,
+          "extra_reward_pct": 1.5,
+          "cap_amount_monthly": 500,
+          "note": "海外消費加碼，日韓為主打地區；海外刷卡另收約 1.5% 國外交易服務費，需確認本卡是否折抵",
+          "valid_until": "2026-12-31"
+        },
+        {
+          "payment_method": "linepay",
+          "channels": [
+            "kr_convenience",
+            "kr_cosmetics",
+            "kr_supermarket",
+            "kr_department"
+          ],
+          "base_reward_pct": 1,
+          "extra_reward_pct": 4,
+          "cap_amount_monthly": 300,
+          "note": "韓國指定店家綁中信 LINE Pay 卡再加碼；帳戶扣款免海外手續費，但活動回饋每期調整",
+          "valid_until": "2026-12-31",
+          "is_affiliate_highlight": true
+        },
+        {
+          "payment_method": "easycard",
+          "channels": [
+            "all"
+          ],
+          "base_reward_pct": 0.5,
+          "extra_reward_pct": 0,
+          "cap_amount_monthly": 200,
+          "note": "實體悠遊卡自動加值綁本卡的回饋",
+          "valid_until": "2026-12-31"
+        },
+        {
+          "payment_method": "linepay",
+          "channels": [
+            "shopee",
+            "momo_shop",
+            "pchome"
+          ],
+          "base_reward_pct": 1,
+          "extra_reward_pct": 2,
+          "cap_amount_monthly": 300,
+          "note": "網購綁 LINE Pay 加碼",
+          "valid_until": "2026-12-31"
+        }
+      ]
+    },
+    {
+      "id": "sinopac_sport",
+      "bank": "永豐銀行",
+      "name": "SPORT 卡",
+      "apply_url": "https://bank.sinopac.com/sinopacBT/personal/credit-card/introduction/list/sport.html",
+      "rules": [
+        {
+          "payment_method": "jkopay",
+          "channels": [
+            "all"
+          ],
+          "base_reward_pct": 1,
+          "extra_reward_pct": 1.5,
+          "cap_amount_monthly": 300,
+          "note": "行動支付基本加碼",
+          "valid_until": "2026-12-31"
+        },
+        {
+          "payment_method": "linepay",
+          "channels": [
+            "all"
+          ],
+          "base_reward_pct": 1,
+          "extra_reward_pct": 1.5,
+          "cap_amount_monthly": 300,
+          "note": "行動支付基本加碼",
+          "valid_until": "2026-12-31"
+        },
+        {
+          "payment_method": "apple_pay",
+          "channels": [
+            "all"
+          ],
+          "base_reward_pct": 1,
+          "extra_reward_pct": 2,
+          "cap_amount_monthly": 300,
+          "note": "感應支付加碼，運動類通路另有活動",
+          "valid_until": "2026-12-31"
+        },
+        {
+          "payment_method": "physical",
+          "channels": [
+            "all"
+          ],
+          "base_reward_pct": 1,
+          "extra_reward_pct": 0,
+          "cap_amount_monthly": null,
+          "note": "一般消費 1%"
+        },
+        {
+          "payment_method": "google_pay",
+          "channels": [
+            "all"
+          ],
+          "base_reward_pct": 1,
+          "extra_reward_pct": 2,
+          "cap_amount_monthly": 300,
+          "note": "感應支付加碼",
+          "valid_until": "2026-12-31"
+        },
+        {
+          "payment_method": "ipass_money",
+          "channels": [
+            "all"
+          ],
+          "base_reward_pct": 1,
+          "extra_reward_pct": 1.5,
+          "cap_amount_monthly": 300,
+          "note": "一卡通 MONEY 綁定",
+          "valid_until": "2026-12-31"
+        },
+        {
+          "payment_method": "linepay",
+          "channels": [
+            "kr_convenience",
+            "kr_cosmetics",
+            "kr_supermarket",
+            "kr_department"
+          ],
+          "base_reward_pct": 1,
+          "extra_reward_pct": 2,
+          "cap_amount_monthly": 300,
+          "note": "韓國 LINE Pay 綁永豐卡加碼；帳戶扣款免海外手續費，但活動回饋每期調整",
+          "valid_until": "2026-12-31"
+        },
+        {
+          "payment_method": "physical",
+          "channels": [
+            "vieshow",
+            "showtime"
+          ],
+          "base_reward_pct": 1,
+          "extra_reward_pct": 2,
+          "cap_amount_monthly": 300,
+          "note": "影城與運動賽事加碼",
+          "valid_until": "2026-12-31"
+        }
+      ]
+    },
+    {
+      "id": "dbs_eco",
+      "bank": "星展銀行",
+      "name": "eco 永續卡",
+      "apply_url": "https://www.dbs.com.tw/personal-zh/cards/default.page",
+      "rules": [
+        {
+          "payment_method": "pxpayplus",
+          "channels": [
+            "pxmart",
+            "carrefour",
+            "rtmart"
+          ],
+          "base_reward_pct": 1,
+          "extra_reward_pct": 3,
+          "cap_amount_monthly": 300,
+          "note": "指定超市通路綠色消費加碼",
+          "valid_until": "2026-12-31"
+        },
+        {
+          "payment_method": "linepay",
+          "channels": [
+            "starbucks",
+            "louisa",
+            "cama"
+          ],
+          "base_reward_pct": 1,
+          "extra_reward_pct": 3,
+          "cap_amount_monthly": 200,
+          "note": "自備杯咖啡通路加碼",
+          "valid_until": "2026-12-31"
+        },
+        {
+          "payment_method": "physical",
+          "channels": [
+            "all"
+          ],
+          "base_reward_pct": 1,
+          "extra_reward_pct": 0,
+          "cap_amount_monthly": null,
+          "note": "一般消費 1%"
+        },
+        {
+          "payment_method": "physical",
+          "channels": [
+            "jp_general",
+            "jp_convenience",
+            "jp_drugstore",
+            "jp_donki",
+            "jp_supermarket",
+            "jp_restaurant",
+            "jp_department",
+            "kr_general",
+            "kr_convenience",
+            "kr_daiso",
+            "kr_cafe",
+            "kr_cosmetics",
+            "kr_supermarket",
+            "kr_department",
+            "kr_dutyfree",
+            "kr_market",
+            "kr_restaurant"
+          ],
+          "base_reward_pct": 1,
+          "extra_reward_pct": 1.5,
+          "cap_amount_monthly": null,
+          "note": "海外消費 2.5% 無上限，日韓不另設門檻；海外刷卡另收約 1.5% 國外交易服務費，需確認本卡是否折抵",
+          "valid_until": "2026-12-31",
+          "is_affiliate_highlight": true
+        },
+        {
+          "payment_method": "apple_pay",
+          "channels": [
+            "jp_general",
+            "jp_convenience",
+            "jp_drugstore",
+            "jp_donki",
+            "jp_supermarket",
+            "jp_restaurant",
+            "jp_department",
+            "kr_general",
+            "kr_convenience",
+            "kr_daiso",
+            "kr_cafe",
+            "kr_cosmetics",
+            "kr_supermarket",
+            "kr_department",
+            "kr_dutyfree",
+            "kr_market",
+            "kr_restaurant"
+          ],
+          "base_reward_pct": 1,
+          "extra_reward_pct": 1.5,
+          "cap_amount_monthly": null,
+          "note": "海外感應支付同享 2.5%；海外刷卡另收約 1.5% 國外交易服務費，需確認本卡是否折抵",
+          "valid_until": "2026-12-31"
+        },
+        {
+          "payment_method": "physical",
+          "channels": [
+            "ikea",
+            "test_rite",
+            "nitori"
+          ],
+          "base_reward_pct": 1,
+          "extra_reward_pct": 2,
+          "cap_amount_monthly": 300,
+          "note": "居家永續通路加碼",
+          "valid_until": "2026-12-31"
+        }
+      ]
+    },
+    {
+      "id": "cathay_koko",
+      "bank": "國泰世華",
+      "name": "KOKO COMBO icash 卡",
+      "apply_url": "https://www.cathaybk.com.tw/cathaybk/personal/product/credit-card/cards/koko-icash/",
+      "rules": [
+        {
+          "payment_method": "icashpay",
+          "channels": [
+            "all"
+          ],
+          "base_reward_pct": 1,
+          "extra_reward_pct": 2,
+          "cap_amount_monthly": 200,
+          "note": "icash Pay 綁定加碼",
+          "valid_until": "2026-12-31"
+        },
+        {
+          "payment_method": "icashpay",
+          "channels": [
+            "seven_eleven"
+          ],
+          "base_reward_pct": 1,
+          "extra_reward_pct": 5,
+          "cap_amount_monthly": 200,
+          "note": "7-ELEVEN × icash Pay 主打通路加碼",
+          "is_affiliate_highlight": true,
+          "valid_until": "2026-12-31"
+        },
+        {
+          "payment_method": "physical",
+          "channels": [
+            "all"
+          ],
+          "base_reward_pct": 0.5,
+          "extra_reward_pct": 0,
+          "cap_amount_monthly": null,
+          "note": "一般消費 0.5%"
+        },
+        {
+          "payment_method": "ipass_money",
+          "channels": [
+            "all"
+          ],
+          "base_reward_pct": 1,
+          "extra_reward_pct": 2,
+          "cap_amount_monthly": 200,
+          "note": "一卡通 MONEY 綁定加碼",
+          "valid_until": "2026-12-31"
+        },
+        {
+          "payment_method": "ipass_money",
+          "channels": [
+            "jp_general",
+            "jp_convenience",
+            "jp_drugstore",
+            "jp_donki",
+            "jp_supermarket",
+            "jp_restaurant",
+            "jp_department"
+          ],
+          "base_reward_pct": 1,
+          "extra_reward_pct": 3,
+          "cap_amount_monthly": 300,
+          "note": "一卡通 MONEY 掃日本 PayPay（2024/11 起支援）；帳戶扣款免海外手續費，但活動回饋每期調整",
+          "valid_until": "2026-12-31",
+          "is_affiliate_highlight": true
+        },
+        {
+          "payment_method": "easycard",
+          "channels": [
+            "all"
+          ],
+          "base_reward_pct": 0.5,
+          "extra_reward_pct": 0,
+          "cap_amount_monthly": 200,
+          "note": "實體悠遊卡自動加值綁本卡的回饋",
+          "valid_until": "2026-12-31"
+        }
+      ]
+    },
+    {
+      "id": "hncb_ipass",
+      "bank": "華南銀行",
+      "name": "i網購生活卡",
+      "apply_url": "https://www.hncb.com.tw/wps/portal/HNCB/credit-card",
+      "rules": [
+        {
+          "payment_method": "taiwanpay",
+          "channels": [
+            "all"
+          ],
+          "base_reward_pct": 1,
+          "extra_reward_pct": 2,
+          "cap_amount_monthly": 200,
+          "note": "台灣 Pay 綁定加碼，需每月登錄",
+          "valid_until": "2026-12-31"
+        },
+        {
+          "payment_method": "easywallet",
+          "channels": [
+            "all"
+          ],
+          "base_reward_pct": 1,
+          "extra_reward_pct": 1,
+          "cap_amount_monthly": 200,
+          "note": "悠遊付自動加值另計",
+          "valid_until": "2026-12-31"
+        },
+        {
+          "payment_method": "physical",
+          "channels": [
+            "all"
+          ],
+          "base_reward_pct": 1,
+          "extra_reward_pct": 0,
+          "cap_amount_monthly": null,
+          "note": "一般消費 1%"
+        },
+        {
+          "payment_method": "ipass_money",
+          "channels": [
+            "all"
+          ],
+          "base_reward_pct": 1,
+          "extra_reward_pct": 2,
+          "cap_amount_monthly": 200,
+          "note": "一卡通 MONEY 綁定加碼",
+          "valid_until": "2026-12-31"
+        },
+        {
+          "payment_method": "ipass_card",
+          "channels": [
+            "all"
+          ],
+          "base_reward_pct": 1,
+          "extra_reward_pct": 0.5,
+          "cap_amount_monthly": 200,
+          "note": "實體一卡通自動加值回饋",
+          "valid_until": "2026-12-31"
+        },
+        {
+          "payment_method": "easycard",
+          "channels": [
+            "all"
+          ],
+          "base_reward_pct": 0.5,
+          "extra_reward_pct": 0,
+          "cap_amount_monthly": 200,
+          "note": "實體悠遊卡自動加值綁本卡的回饋",
+          "valid_until": "2026-12-31"
+        }
+      ]
+    },
+    {
+      "id": "megabank_lido",
+      "bank": "兆豐銀行",
+      "name": "利多卡",
+      "apply_url": "https://www.megabank.com.tw/personal/credit-card",
+      "rules": [
+        {
+          "payment_method": "taiwanpay",
+          "channels": [
+            "all"
+          ],
+          "base_reward_pct": 1,
+          "extra_reward_pct": 3,
+          "cap_amount_monthly": 300,
+          "note": "台灣 Pay 主打加碼，公用事業另有活動",
+          "is_affiliate_highlight": true,
+          "valid_until": "2026-12-31"
+        },
+        {
+          "payment_method": "physical",
+          "channels": [
+            "all"
+          ],
+          "base_reward_pct": 1,
+          "extra_reward_pct": 0,
+          "cap_amount_monthly": null,
+          "note": "一般消費 1%"
+        },
+        {
+          "payment_method": "twqr",
+          "channels": [
+            "all"
+          ],
+          "base_reward_pct": 1,
+          "extra_reward_pct": 2,
+          "cap_amount_monthly": 300,
+          "note": "TWQR 掃碼比照台灣 Pay 加碼",
+          "valid_until": "2026-12-31"
+        },
+        {
+          "payment_method": "physical",
+          "channels": [
+            "jp_general",
+            "jp_convenience",
+            "jp_drugstore",
+            "jp_donki",
+            "jp_supermarket",
+            "jp_restaurant",
+            "jp_department",
+            "kr_general",
+            "kr_convenience",
+            "kr_daiso",
+            "kr_cafe",
+            "kr_cosmetics",
+            "kr_supermarket",
+            "kr_department",
+            "kr_dutyfree",
+            "kr_market",
+            "kr_restaurant"
+          ],
+          "base_reward_pct": 1,
+          "extra_reward_pct": 1,
+          "cap_amount_monthly": 300,
+          "note": "海外一般消費加碼；海外刷卡另收約 1.5% 國外交易服務費，需確認本卡是否折抵",
+          "valid_until": "2026-12-31"
+        },
+        {
+          "payment_method": "taiwanpay",
+          "channels": [
+            "mrt",
+            "bus",
+            "parking",
+            "cpc"
+          ],
+          "base_reward_pct": 1,
+          "extra_reward_pct": 2,
+          "cap_amount_monthly": 300,
+          "note": "台灣 Pay 交通與繳費加碼",
+          "valid_until": "2026-12-31"
+        }
+      ]
+    },
+    {
+      "id": "esun_ubear",
+      "bank": "玉山銀行",
+      "name": "U Bear 卡",
+      "apply_url": "https://www.esunbank.com/zh-tw/personal/credit-card/intro/benefits/card/ubear",
+      "rules": [
+        {
+          "payment_method": "linepay",
+          "channels": [
+            "all"
+          ],
+          "base_reward_pct": 1,
+          "extra_reward_pct": 2,
+          "cap_amount_monthly": 300,
+          "note": "指定行動支付加碼",
+          "valid_until": "2026-12-31"
+        },
+        {
+          "payment_method": "physical",
+          "channels": [
+            "jp_general",
+            "jp_convenience",
+            "jp_drugstore",
+            "jp_donki",
+            "jp_supermarket",
+            "jp_restaurant",
+            "jp_department",
+            "kr_general",
+            "kr_convenience",
+            "kr_daiso",
+            "kr_cafe",
+            "kr_cosmetics",
+            "kr_supermarket",
+            "kr_department",
+            "kr_dutyfree",
+            "kr_market",
+            "kr_restaurant"
+          ],
+          "base_reward_pct": 1,
+          "extra_reward_pct": 2,
+          "cap_amount_monthly": 300,
+          "note": "海外實體消費加碼；海外刷卡另收約 1.5% 國外交易服務費，需確認本卡是否折抵",
+          "valid_until": "2026-12-31",
+          "is_affiliate_highlight": true
+        },
+        {
+          "payment_method": "apple_pay",
+          "channels": [
+            "jp_general",
+            "jp_convenience",
+            "jp_drugstore",
+            "jp_donki",
+            "jp_supermarket",
+            "jp_restaurant",
+            "jp_department",
+            "kr_general",
+            "kr_convenience",
+            "kr_daiso",
+            "kr_cafe",
+            "kr_cosmetics",
+            "kr_supermarket",
+            "kr_department",
+            "kr_dutyfree",
+            "kr_market",
+            "kr_restaurant"
+          ],
+          "base_reward_pct": 1,
+          "extra_reward_pct": 2,
+          "cap_amount_monthly": 300,
+          "note": "海外感應支付加碼；海外刷卡另收約 1.5% 國外交易服務費，需確認本卡是否折抵",
+          "valid_until": "2026-12-31"
+        },
+        {
+          "payment_method": "physical",
+          "channels": [
+            "all"
+          ],
+          "base_reward_pct": 1,
+          "extra_reward_pct": 0,
+          "cap_amount_monthly": null,
+          "note": "一般消費 1%",
+          "valid_until": "2026-12-31"
+        }
+      ]
+    }
+  ]
+}

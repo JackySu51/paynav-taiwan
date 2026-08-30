@@ -1,0 +1,72 @@
+{
+  "version": "2026.08-sample",
+  "note": "要監控的官方優惠頁清單。這份只存網址與對應的卡片 id，不存抓下來的內容——避免把別人網站的內容重新發佈。",
+  "check_interval_hours": 24,
+  "sources": [
+    {
+      "id": "esun_unicard",
+      "label": "玉山 Unicard 權益頁",
+      "url": "https://www.esunbank.com/zh-tw/personal/credit-card/intro/benefits/card/unicard",
+      "cards": [
+        "esun_unicard"
+      ],
+      "watch": "自選類別的回饋率與門檻"
+    },
+    {
+      "id": "cathay_cube",
+      "label": "國泰世華 CUBE 卡方案頁",
+      "url": "https://www.cathaybk.com.tw/cathaybk/personal/product/credit-card/cards/cube/",
+      "cards": [
+        "cathay_cube"
+      ],
+      "watch": "玩數位／玩世界方案的回饋率"
+    },
+    {
+      "id": "taishin_gogo",
+      "label": "台新 @GoGo 卡介紹頁",
+      "url": "https://www.taishinbank.com.tw/TSB/personal/credit/intro/overview/gogocard/",
+      "cards": [
+        "taishin_gogo",
+        "taishin_flygo"
+      ],
+      "watch": "行動支付加碼與每月上限"
+    },
+    {
+      "id": "fubon_j",
+      "label": "台北富邦 J 卡",
+      "url": "https://www.fubon.com/banking/personal/credit_card/all_card/j_card/j_card.htm",
+      "cards": [
+        "fubon_j"
+      ],
+      "watch": "街口加碼活動與回饋上限"
+    },
+    {
+      "id": "jkopay_promo",
+      "label": "街口支付優惠總覽",
+      "url": "https://www.jkos.com/",
+      "cards": [],
+      "watch": "當期活動與日本跨境加碼"
+    },
+    {
+      "id": "pxpayplus_promo",
+      "label": "全支付優惠總覽",
+      "url": "https://www.pxpayplus.com/",
+      "cards": [],
+      "watch": "當期活動與綁卡加碼"
+    },
+    {
+      "id": "linepay_promo",
+      "label": "LINE Pay 台灣優惠",
+      "url": "https://pay.line.me/tw/",
+      "cards": [],
+      "watch": "LINE POINTS 加碼與指定通路"
+    },
+    {
+      "id": "ipass_money_promo",
+      "label": "一卡通 MONEY 官網",
+      "url": "https://www.i-pass.com.tw/",
+      "cards": [],
+      "watch": "綠點回饋與日本 PayPay 跨境活動"
+    }
+  ]
+}

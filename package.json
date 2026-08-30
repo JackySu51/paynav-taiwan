@@ -1,0 +1,45 @@
+{
+  "name": "paynav-taiwan",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "台灣支付導航 PayNav Taiwan — 100% Client-Side 的支付回饋比較 PWA",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "typecheck": "tsc -b --force",
+    "preview": "vite preview",
+    "deploy": "npm run build && npx wrangler pages deploy dist --project-name paynav-taiwan",
+    "check:rules": "node scripts/check-rules.mjs",
+    "check:rules:strict": "node scripts/check-rules.mjs --strict",
+    "promo:watch": "node scripts/watch-promos.mjs",
+    "promo:report": "node scripts/watch-promos.mjs --report",
+    "packs:list": "node scripts/build-packs.mjs --list",
+    "packs:build": "node scripts/build-packs.mjs",
+    "ios:setup": "npm run build && npx cap add ios",
+    "ios:sync": "npm run build && npx cap sync ios",
+    "ios:open": "npx cap open ios"
+  },
+  "dependencies": {
+    "jsbarcode": "^3.11.6",
+    "lucide-react": "^0.454.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "zustand": "^5.0.2"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^6.0.0",
+    "@capacitor/core": "^6.0.0",
+    "@capacitor/ios": "^6.0.0",
+    "@types/node": "^22.10.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@vitejs/plugin-react": "^4.3.4",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.15",
+    "typescript": "^5.6.3",
+    "vite": "^6.0.1",
+    "vite-plugin-pwa": "^0.21.1"
+  }
+}
